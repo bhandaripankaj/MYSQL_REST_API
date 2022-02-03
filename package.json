@@ -1,0 +1,30 @@
+{
+  "name": "anrx",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/register": "^7.16.9",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^15.0.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.4",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.15.0",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "sequelize-cli": "^6.4.1"
+  }
+}

@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "1644b68d-ffa4-46c2-92fe-cd2b150b7eff",
+		"name": "ANRX test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "1643829952360-03_Problem-2.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/product/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/product/delete/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/product/get/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"get",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/product/get-all?page=1&limit=10&orderby=id&order=asc",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"get-all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "orderby",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add product category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/product/add-product-category",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"add-product-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "testing3",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "my.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/product/update/44",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"44"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "generic",
+			"item": [
+				{
+					"name": "upload image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "1tMCooenm/03_Problem-2.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/image/upload",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"image",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "add category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "bus",
+									"type": "text"
+								},
+								{
+									"key": "image_url",
+									"value": "demo.png",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "testing",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/category/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/category/get",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"category",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/category/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"category",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "my book",
+									"type": "text"
+								},
+								{
+									"key": "image_url",
+									"value": "book.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/category/update/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"category",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category & subcategory with product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/category/get-categore-subcategory-product",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"category",
+								"get-categore-subcategory-product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
