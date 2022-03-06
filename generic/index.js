@@ -27,3 +27,26 @@ export const imageUpload = async (req,res)=>{
     
     }
 }
+
+export const addMedia = async (req,res)=>{
+    var storage = multer.diskStorage({
+        destination:function(req,files,cb){
+            cb(null,"public/images")
+        },
+        filename:function(req,file,cb){
+            cb(null,file.fieldname + Date.now()+file.originalname)
+        }
+    })
+    const upload = multer({
+        storage:storage
+    }).any()
+    upload(req,res, function(err){
+        if(err){
+            res.send(err)
+        }
+        return res.json({
+            message:"Upload file successfully.",
+            data:req.files
+        })
+    })
+}
