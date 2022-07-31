@@ -9,6 +9,7 @@
     "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/register": "^7.16.9",
     "cookie-parser": "~1.4.4",
+    "crypto": "^1.0.1",
     "debug": "~2.6.9",
     "dotenv": "^15.0.0",
     "express": "~4.16.1",
@@ -19,7 +20,8 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
     "sequelize": "^6.15.0",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.5",
+    "twilio": "^3.75.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",

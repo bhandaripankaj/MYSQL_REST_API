@@ -12,15 +12,17 @@ var http = require('http');
 require('dotenv').config()
 var app = express();
 
+
+// app.use(express.static(path.join(__dirname, 'public')));
+
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
@@ -40,7 +42,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 5000));
 //For avoidong Heroku $PORT error
 app.get('/', function(request, response) {
     var result = 'App is running Now'
@@ -50,3 +52,6 @@ app.get('/', function(request, response) {
 });
 
 module.exports = app;
+
+
+
